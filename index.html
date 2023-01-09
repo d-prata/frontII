@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login C.R.U.D GRUD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="bgBranco">
+      <div class="caixa entrar">
+        <img src="./assets/crudgrudPink.png" alt="">
+        <h2>Já tem uma conta?</h2>
+        <button onclick="caixaForm" class="btnEntrar">Entrar</button>
+      </div>
+      <div class="caixa cadastro">
+        <img class="logo" src="./assets/crudgrud.png" alt="logo-crud">
+        <h2>Não tem uma conta?</h2>
+        <button onclick="caixaForm" class="btnCadastrar">Criar conta</button>
+      </div>
+    </div>
+    <div class="caixaForm">
+      <div class="form formEntrar">
+        <form id="formLogin">
+          <h3>Entrar agora</h3>
+          <input type="text" placeholder="Usuário" class="login" id="inputUsuarioLogin">
+          <input type="password" placeholder="Senha" class="login" id="inputSenhaLogin">
+          <input type="submit" value="Login">
+        </form>
+      </div>
+
+      <!-- CONTAINER DO FORMULÁRIO DE CADASTRO -->
+      <div class="form formCadastrar">
+        <form id="cadastroConta">
+          <h3>Cadastrar conta</h3>
+          <label for="usuarioCadastro" id="labelUsuario"></label>
+          <input type="text" placeholder="Usuário" class="usuarioUser" id="inputUsuario">
+          <label for="senhaCadastro" id="labelSenha"></label>
+          <input type="password" placeholder="Senha" id="inputSenha">
+          <label for="confirmaSenhaCadastro" id="labelConfirmaSenha"></label>
+          <input type="password" placeholder="Confirmar senha" id="inputConfirmaSenha">
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+
+  <footer>
+    <small>Denis O. Prata copyright&copy; 2022.</small>
+  </footer>
+
+
+</body>
+
+</html>

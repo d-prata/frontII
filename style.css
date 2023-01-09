@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #DC143C;
+  background-image: url(./assets/bg-texture.png);
+}
+
+body.active {
+  background: #1E90FF;
+  background-image: url(./assets/bg-texture.png);
+  transition: .6s ease;
+}
+
+.container {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  margin: 30px;
+  
+}
+
+.bgBranco {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 420px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 0 5px 45px rgba(04 ,03, 05, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgBranco .caixa {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  
+}
+
+.bgBranco .caixa img {
+  width: 320px;
+  height: 60px;
+}
+
+.bgBranco .caixa h2 {
+  color: #ffe4c4;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.bgBranco .caixa button {
+  cursor: pointer;
+  padding: 6px 12px;
+  background: transparent;
+  color: #ffe4c4;
+  border: #ffe4c4 2px solid;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+
+.caixaForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #202020;
+  z-index: 10;
+  box-shadow: 0 5px 45px rgba(04, 03, 05, .15);
+  transition: .6s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.caixaForm.active {
+  left: 50%;
+}
+
+.caixaForm .form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transition: .8s;
+}
+
+.caixaForm .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.caixaForm .form form h3 {
+   font-size: 1.5em;
+   color: #ffe4c4;
+   margin-bottom: 10px;
+   font-weight: 500;
+}
+
+.caixaForm .form form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background: #ffe4c4;
+  outline: auto;
+  border-radius: 3px;
+}
+
+.caixaForm .form form input[type="submit"] {
+  background: transparent;
+  color: #ffe4c4;
+  max-width: 100px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 12px;
+  border: #ffe4c4 2px solid;
+
+}
+
+.caixaForm.active .formEntrar {  
+  transition-delay: .25s;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.caixaForm .formCadastrar {
+  transform: translate3d(100%, 0, 0);
+}
+
+.caixaForm.active .formCadastrar {
+  transform: translate3d(0, 0, 0);
+  transition-delay: .25s;
+}
+
+footer {
+  position: absolute;
+  width: 50%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+  color:#ffe4c4
+}
+
+@media only screen and (max-width: 768px ) {
+  .container {
+    max-width: 400px;
+    height: 500px;
+  }
+
+  .caixaForm {
+    width: 100%;
+    height: 355px;
+  }
+
+  .bgBranco {
+    top: 0;
+    height: 100%;
+  }
+
+  .bgBranco .caixa {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+  }
+
+  .bgBranco .caixa:nth-of-type(1) {
+    top: 0;
+  }
+
+  .caixaForm.active {
+    left: 0;
+    top: 150px;
+  }
+}
+
